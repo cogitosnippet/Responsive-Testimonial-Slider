@@ -1,0 +1,116 @@
+:root{
+  --Dark_Blue: hsl(240, 38%, 20%);
+  --Grayish_Blue: hsl(240, 18%, 77%);
+}
+body{
+  font-family: Inter;
+}
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  overflow: hidden;
+}
+
+.dashboard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  width: 70rem;
+  padding: 50px 60px 50px 50px;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  height: auto;
+}
+.testimonial{
+  background-image: url(images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  margin-right: -5rem;
+  z-index: 1;
+  background-position: top -1rem left 5rem;
+}
+.content{
+  color: var(--Dark_Blue);
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 45px;
+}
+.name{
+  font-weight: 700;
+  color: var(--Dark_Blue);
+}
+.designation{
+  font-weight: 500;
+  color: var(--Grayish_Blue);
+  margin-left: 10px;
+}
+.user{
+  position: relative;
+}
+.user-image{
+  width: 30rem;
+  height: 30rem;
+  background: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.arrow{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4rem;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  position: absolute;
+  bottom: -1rem;
+  left: 2rem;
+  z-index: 3;
+}
+.all{
+  cursor: pointer;
+}
+@media (max-width:750px){
+  .container{
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    /* margin: 10rem 0rem 0rem 0rem; */
+  }
+  .dashboard{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 40px 0px 0px 0px;
+    background-position: top;
+  }
+  .testimonial{
+    margin: 0 0 10rem 0;
+  }
+  .content{
+    text-align: center;
+    font-size: 20px;
+  }
+  .para{
+    text-align: center;
+  }
+  .user-image{
+    width: 19rem;
+    height: 19rem;
+  }
+}
